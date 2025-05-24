@@ -62,40 +62,37 @@ const Navbar: React.FC = () => {
                 </div> */}
 
                 <div className="relative inline-block">
-  <div className="group">
-    <button
-      className="flex items-center space-x-1 text-text-primary hover:text-primary transition-colors px-3 py-2"
-    >
-      <span>{user.name}</span>
-      <User size={18} />
-    </button>
-
-    {/* Dropdown */}
-    <div
-      className="absolute right-0 mt-1 w-48 bg-background-light border border-secondary rounded-md shadow-lg z-50
-      opacity-0 invisible group-hover:opacity-100 group-hover:visible
-      transition-all duration-200"
-    >
-      <div className="py-1">
-        <Link
-          to="/profile"
-          className="block px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-primary transition-colors"
-        >
-          Your Profile
-        </Link>
-        <button
-          onClick={handleLogout}
-          className="block w-full text-left px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-error transition-colors"
-        >
-          Sign out
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+                  <div className="group">
+                    <button
+                      className="flex items-center space-x-1 text-text-primary hover:text-primary transition-colors px-3 py-2"
+                    >
+                      <span>{user.name}</span>
+                      <User size={18} />
+                    </button>
+                
+                    {/* Dropdown */}
+                    <div
+                      className="absolute right-0 mt-1 w-48 bg-background-light border border-secondary rounded-md shadow-lg z-50
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-200"
+                    >
+                      <div className="py-1">
+                        <Link
+                          to="/profile"
+                          className="block px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-primary transition-colors"
+                        >
+                          Your Profile
+                        </Link>
+                        <button
+                          onClick={handleLogout}
+                          className="block w-full text-left px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-error transition-colors"
+                        >
+                          Sign out
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </>
             )}
           </div>
