@@ -61,23 +61,29 @@ const Navbar: React.FC = () => {
                   </div>
                 </div> */}
 
-                <div className="relative inline-block group">
-                  <button 
+                <div className="relative group inline-block">
+                  <button
                     className="flex items-center space-x-1 text-text-primary hover:text-primary transition-colors px-3 py-2"
                   >
                     <span>{user.name}</span>
                     <User size={18} />
                   </button>
-                  
-                  <div className="absolute right-0 mt-2 w-48 bg-background-light border border-secondary rounded-md shadow-lg overflow-hidden z-10 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 transform origin-top-right pointer-events-none group-hover:pointer-events-auto">
+                
+                  {/* Dropdown */}
+                  <div
+                    className="absolute right-0 mt-2 w-48 bg-background-light border border-secondary rounded-md shadow-lg z-50 
+                    opacity-0 scale-95 pointer-events-none 
+                    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto 
+                    transition-all duration-200 origin-top-right"
+                  >
                     <div className="py-1">
-                      <Link 
-                        to="/profile" 
+                      <Link
+                        to="/profile"
                         className="block px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-primary transition-colors"
                       >
                         Your Profile
                       </Link>
-                      <button 
+                      <button
                         onClick={handleLogout}
                         className="block w-full text-left px-4 py-2 text-sm text-text-primary hover:bg-secondary hover:text-error transition-colors"
                       >
@@ -86,6 +92,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
 
               </>
             )}
