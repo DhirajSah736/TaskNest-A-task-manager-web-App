@@ -11,7 +11,7 @@ export default defineConfig({
   },
 
   build: {
-    outDir: path.resolve(__dirname, '../dist'), // output to root/dist
+    outDir: path.resolve(__dirname, 'dist'), // output to root/dist
     emptyOutDir: true, // clean dist folder before build
   },
 
